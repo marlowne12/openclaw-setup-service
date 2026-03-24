@@ -26,12 +26,15 @@ export default function HomePage() {
           <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
             OpenClaw Setup
           </div>
-          <a
-            href="#pricing"
-            className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
-          >
-            Get Started
-          </a>
+          <div className="flex items-center gap-6">
+            <a href="/openclaw-setup-service/blog" className="text-gray-300 hover:text-white transition-colors font-medium">Blog</a>
+            <a
+              href="#pricing"
+              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+            >
+              Get Started
+            </a>
+          </div>
         </div>
       </nav>
 

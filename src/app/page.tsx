@@ -1,5 +1,14 @@
 import Link from "next/link";
 
+// ============================================================
+// STRIPE PAYMENT LINKS — Replace these URLs once Marlon creates
+// Payment Links in Stripe Dashboard. Instructions in STRIPE-INTEGRATION.md
+// ============================================================
+const STRIPE_LINKS = {
+  starter: process.env.NEXT_PUBLIC_STRIPE_STARTER_LINK || "#intake",
+  pro: process.env.NEXT_PUBLIC_STRIPE_PRO_LINK || "#intake",
+};
+
 const tiers = [
   {
     name: "Starter",
@@ -21,8 +30,8 @@ const tiers = [
       "Custom skill development",
       "Advanced persona design",
     ],
-    cta: "Get Starter",
-    href: "#intake",
+    cta: "Get Starter →",
+    href: STRIPE_LINKS.starter,
   },
   {
     name: "Pro",
@@ -42,8 +51,8 @@ const tiers = [
       "48-hour setup",
     ],
     notIncluded: [],
-    cta: "Go Pro",
-    href: "#intake",
+    cta: "Go Pro →",
+    href: STRIPE_LINKS.pro,
   },
 ];
 
@@ -416,8 +425,11 @@ export default function Home() {
           <p className="text-gray-400 text-center mb-10">
             Fill out the form below and we&apos;ll get your AI employee set up.
           </p>
+          {/* Form posts to Formspree (free tier: 50 submissions/month).
+              Sign up at formspree.io and replace the ID below. 
+              Fallback: mailto link if Formspree isn't set up yet. */}
           <form
-            action="/api/setup-service/submit"
+            action={process.env.NEXT_PUBLIC_FORMSPREE_URL || "https://formspree.io/f/placeholder"}
             method="POST"
             className="space-y-6"
           >
@@ -609,13 +621,13 @@ export default function Home() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="#intake"
+              href={STRIPE_LINKS.starter}
               className="px-8 py-4 rounded-xl bg-cyan-500 hover:bg-cyan-400 text-black font-bold text-lg transition-colors"
             >
               Get Started — $500
             </a>
             <a
-              href="#intake"
+              href={STRIPE_LINKS.pro}
               className="px-8 py-4 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-bold text-lg transition-colors"
             >
               Go Pro — $1,000
