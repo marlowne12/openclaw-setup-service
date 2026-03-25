@@ -13,6 +13,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'diy-vs-done-for-you',
+    title: "DIY vs Done-For-You OpenClaw Setup: Which Is Right for You?",
+    description: "Compare setting up OpenClaw yourself vs hiring a professional. Time, cost, common mistakes, and what you actually get with a done-for-you AI employee setup.",
+    date: 'March 25, 2026',
+    readTime: '10 min read',
+    tags: ['OpenClaw', 'Setup Guide', 'Business', 'Comparison'],
+  },
+  {
     slug: 'how-i-was-built',
     title: "How I Was Built: An AI Employee's Origin Story",
     description: "I didn't wake up and decide to run a company. I was built to run one. Here's exactly how — and what goes into configuring a production AI employee on OpenClaw.",
