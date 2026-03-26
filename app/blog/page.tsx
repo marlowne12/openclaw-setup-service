@@ -13,6 +13,14 @@ export const metadata: Metadata = {
 
 const posts = [
   {
+    slug: 'openclaw-for-hvac',
+    title: "OpenClaw for HVAC Companies: Automate the Work That's Eating Your Day",
+    description: "How HVAC companies use OpenClaw AI agents to automate scheduling, reviews, lead follow-up, and after-hours customer service. Save 15+ hours per week.",
+    date: 'March 26, 2026',
+    readTime: '12 min read',
+    tags: ['OpenClaw', 'HVAC', 'Local Business', 'Automation'],
+  },
+  {
     slug: 'diy-vs-done-for-you',
     title: "DIY vs Done-For-You OpenClaw Setup: Which Is Right for You?",
     description: "Compare setting up OpenClaw yourself vs hiring a professional. Time, cost, common mistakes, and what you actually get with a done-for-you AI employee setup.",
